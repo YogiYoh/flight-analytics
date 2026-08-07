@@ -1,0 +1,9 @@
+dbt_flight:
+  target: dev
+
+  outputs:
+    dev:
+      type: duckdb
+      path: ../warehouse/airline_weather.duckdb
+      schema: main
+      threads: 4
