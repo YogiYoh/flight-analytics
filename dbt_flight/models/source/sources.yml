@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: SOURCE
+    database: airline_weather
+    schema: RAW
+    tables:
+      - name: noaa_ghcnh_hourly
+      - name: on_time_performance

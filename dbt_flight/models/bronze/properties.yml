@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: transtats_data
+    description: BTS on-time performance. One row per flight leg.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              [OriginAirportID, DOT_ID_Reporting_Airline,
+               Flight_Number_Reporting_Airline, FlightDate, Dest]
+    columns:
+      - name: OriginAirportID
+        data_tests: [not_null]
+      - name: DOT_ID_Reporting_Airline
+        data_tests: [not_null]
+      - name: Flight_Number_Reporting_Airline
+        data_tests: [not_null]
+      - name: FlightDate
+        data_tests: [not_null]
+      - name: Dest
+        data_tests: [not_null]
+
+  - name: NOAA_data
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [STATION, observed_at]
+    columns:
+      - name: STATION
+        data_tests: [not_null]
+      - name: observed_at
+        data_tests: [not_null]
