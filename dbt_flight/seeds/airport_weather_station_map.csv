@@ -1,0 +1,11 @@
+airport_code,station_id,tz
+SFO,USW00023234,America/Los_Angeles
+LAX,USW00023174,America/Los_Angeles
+SEA,USW00024233,America/Los_Angeles
+DEN,USW00003017,America/Denver
+DFW,USW00003927,America/Chicago
+ORD,USW00094846,America/Chicago
+ATL,USW00013874,America/New_York
+JFK,USW00094789,America/New_York
+BOS,USW00014739,America/New_York
+MIA,USW00012839,America/New_York
